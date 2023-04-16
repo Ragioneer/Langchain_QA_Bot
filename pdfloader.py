@@ -12,7 +12,7 @@ data = loader.load()
 # print(f"you have {len(data)} document/s")
 # print(f"you have {len(data[0].page_content)} Characters")
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=150)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=10)
 texts = text_splitter.split_documents(data)
 print(f"Splitting resulted in {len(texts)} Documents")
 embeddings = OpenAIEmbeddings()
