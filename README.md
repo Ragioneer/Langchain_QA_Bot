@@ -36,7 +36,7 @@ This project, to a great extent is credited to the insurgance of Large language 
 * Langchain
 * OpenAI
 * Unstructured.io
-* FAISS
+* FAISS/ChromaDB
 * SERP API     - Not implemented yet
 * Pinecone     - to be used in replacement of FAISS
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
