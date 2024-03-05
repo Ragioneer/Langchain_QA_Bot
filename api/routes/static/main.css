@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+       url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+       url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum viewport height */
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.chat-box {
+  width: 40%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.chat-history {
+  flex: 1;
+  padding: 20px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Set image to a circle */
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto; /* Center the title horizontally */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+
+input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Add hover effect */
+}
+
+input[type="submit"]:hover {
+  background-color: #0d9870; /* Change background color on hover */
+}
+
+.result {
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: scroll; /* Enable scrolling for chat history */
+  border-radius: 4px; /* Add border radius for visual appeal */
+  background-color: #f5f5f5; /* Add background color for chat history */
+  padding: 10px;
+}
+
+.messages p {
+  margin-bottom: 5px;
+}
+
+/* Media query for responsive design (adjust breakpoints and styles as needed) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .chat-box, .chat-history {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

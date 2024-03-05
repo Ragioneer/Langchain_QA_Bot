@@ -1,4 +1,8 @@
 venv/
+.venv/
+.vscode/
+.github/
+Chromadb/
 
 *.pyc
 __pycache__/

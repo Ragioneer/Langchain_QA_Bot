@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>PDF Based Q&A</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='QA.jpg') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <header>
+    <img src="{{ url_for('static', filename='QA.jpg') }}" class="icon" width="100" height="100" />
+    <b><h1>PDF-Based Q & A</h1></b>
+
+  </header>
+
+  <div class="container">
+    <div class="chat-box">
+      <form id="chat-form" method="post">
+        <input type="text" name="query" placeholder="Enter your query" required />
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="chat-conversation">
+        {% for message in conversation %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="chat-history">
+      <form id="upload-form" method="post" enctype="multipart/form-data">
+        <label for="upload-file">Upload PDF:</label>
+        <input type="file" id="upload-file" name="file_path" accept=".pdf" required>
+        <button type="submit">Load</button>
+      </form>
+
+      <div class="messages">
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
