@@ -3,6 +3,7 @@ venv/
 .vscode/
 .github/
 Chromadb/
+datasets/*
 
 *.pyc
 __pycache__/
@@ -21,3 +22,4 @@ build/
 
 .env
 *.pkl
+
